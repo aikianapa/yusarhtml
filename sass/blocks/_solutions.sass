@@ -1,0 +1,509 @@
+.solutions
+  min-height: 610px
+  max-height: min-content
+  margin-bottom: 6rem
+  &-header
+    background-image: url(../img/mo.png)
+    background-size: cover
+    background-repeat: no-repeat  
+    z-index: 1  
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card
+    &-title      
+      font-size: 4.5rem
+      line-height: 83%
+      font-weight: 700
+    &-text
+      font-size: 1rem
+      line-height: 150%      
+  & .breadcrumb-list
+    display: flex
+    & *
+      font-size: 1rem
+      line-height: 150%
+      color: #BDBDBD
+.cable
+  min-height: 730px
+  max-height: min-content
+  margin-bottom: 30px
+  // background-image: url(../img/cable.png)
+  // background-size: cover
+  // background-repeat: no-repeat
+  z-index: 1
+  position: relative
+  overflow: hidden
+  & .background
+    width: 100%
+    height: 100%
+    object-fit: cover
+    position: absolute
+    top: 0      
+    left: 0
+    z-index: -2
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: linear-gradient(rgba(0, 0, 0, 0.4))
+    z-index: -1
+  & .card-text
+    width: 541px
+.lan
+  display: flex
+  gap: 30px
+  margin-bottom: 30px
+  & .card-1 .card-text
+    width: 445px
+.hours
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 730px
+    max-height: 730px
+    flex: 1
+    // background-image: url(../img/lan.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 730px
+    max-height: 730px
+    flex: 1
+    background: #2BC8DD        
+    & .card
+      &-text_first 
+        width: 445px
+        margin-bottom: 30px
+      &-title_big
+        margin-bottom: 25px
+.phone
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    max-height: 350px
+    // max-height: min-content
+    flex: 1
+    // background-image: url(../img/phone.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    max-height: 730px
+    max-height: min-content
+    padding-left: 46px
+    flex: 2
+    background: #2B8DDD
+    & .card-title
+      margin-bottom: 23px
+      &_big
+        margin-bottom: 34px
+  & .card-3
+    min-height: 350px
+    max-height: 350px
+    flex: 1
+    background: #2BB2DD
+    & .card-text
+      margin-bottom: 30px
+    & .icon
+      margin-right: 20px
+.television  
+  margin-bottom: 30px
+  & .card-text
+    width: 541px
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/television.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/control.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+.camera
+  display: flex
+  gap: 30px
+  margin-bottom: 30px
+.fire-alarm
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    // background-image: url(../img/camera.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    flex: 2
+    // background-image: url(../img/fire-alarm.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card-text
+      width: 445px
+.dispatcher
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    flex: 2
+    // background-image: url(../img/dispatcher.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card-text
+      width: 541px
+  & .card-2
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    background: #2BC8DD
+    & .card-text
+      margin-bottom: 30px
+    & .icon
+      margin-right: 20px
+.evacuation
+  margin-bottom: 30px
+  & .card-text
+      width: 445px
+  & .card-1
+    & .columns
+      width: 92%
+      // margin-bottom: -24px
+      // margin-left: 24px
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      & span
+        margin-bottom: 1rem
+        color: #7A7F83
+        font-size: 3rem
+        line-height: 125%
+        font-weight: 700
+        display: block
+        text-align: center
+      & .hr-blue
+        width: 100%
+        height: 1px
+        margin-bottom: 16px
+        background: #2B8DDD
+      & .hr-gray
+        width: 100%
+        height: 1px
+        margin-bottom: 16px
+        background: #7A7F83
+      & .column-1
+        width: 20%
+        & span
+          color: #2B8DDD
+      & .column-2
+        width: 20%
+      & .column-3
+        width: 20%
+      & .column-4
+        width: 20%
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/conference.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+.automation  
+  margin-bottom: 6rem
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/automation.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card-text
+      width: 541px
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/digital.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card-text
+      width: 445px
+@media (max-width: 1599px)
+  .cable, .television, .evacuation
+    & .card-text
+      width: auto
+  .lan, .dispatcher, .automation
+    & .card-1
+      & .card-text
+        width: auto
+  .hours 
+    & .card-2 
+      & .card-text_first
+        width: auto
+  .fire-alarm,.automation
+    & .card-2
+      & .card-text
+        width: auto
+  .evacuation
+    & .card-1
+      & .columns
+        margin-bottom: 1px
+        margin-left: 1px
+@media (max-width: 1199px)
+  .cable, .lan, .television, .camera, .automation, .evacuation
+    & .card
+      min-height: 350px
+      max-height: min-content
+  .evacuation
+    & .card-text
+      width: 100%
+    & .card-1
+      & .columns
+        width: 100%
+        & span 
+          font-size: 1.75rem
+        // & .column-1
+        //   width: 15%
+        // & .column-2
+        //   width: 15%
+        //   & span
+        //     color: #2B8DDD
+        // & .column-3
+        //   width: 15%
+        // & .column-4
+        //   width: 15%
+@media (max-width: 768px)
+  .solutions
+    & .card-title
+      font-size: 2.5rem    
+  .phone .card-2 .card-title_big
+    font-size: 1.75rem
+  .cable
+    min-height: 350px
+    max-height: min-content
+    padding: 4vw
+  .lan, .television, .camera, .automation
+    flex-direction: column
+    & .card
+      min-height: 350px
+      max-height: min-content
+      padding: 4vw
+  .evacuation
+    & .double-card
+      flex-direction: column
+    & .card-1, .card-2
+      padding: 4vw
+  .automation
+    margin-bottom: 30px

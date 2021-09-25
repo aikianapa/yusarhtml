@@ -1,0 +1,468 @@
+.med-equipment
+  min-height: 610px
+  max-height: min-content
+  margin-bottom: 6rem
+  &-header
+    background-image: url(../img/med-equipment.png)
+    background-size: cover
+    background-repeat: no-repeat  
+    z-index: 1  
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card
+    &-title
+      font-size: 4.5rem
+      line-height: 83%
+      font-weight: 700
+    &-text
+      font-size: 1rem
+      line-height: 150%      
+  & .breadcrumb-list
+    display: flex
+    & *
+      font-size: 1rem
+      line-height: 150%
+      color: #BDBDBD
+.thermal-imager
+  display: flex
+  gap: 30px
+  margin-bottom: 30px
+  & .card-text
+    width: 480px
+    margin-bottom: 30px
+.disinfection
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    // background-image: url(../img/thermal-imager.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative    
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    flex: 2
+    background: #2BB2DD
+.thermometers
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    flex: 2
+    // background-image: url(../img/thermometers.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    background: #2B8DDD
+    & .icon
+      margin-right: 20px
+.circle
+  // width: 100%
+  margin: auto
+  position: relative
+  transform: translateY(44px)
+  &__title
+    position: absolute
+    top: 45%
+    left: 50%
+    font-size: 3rem
+    line-height: 125%
+    font-weight: 700
+    transform: translate(-50%, -50%)
+  &__text
+    position: absolute
+    top: 53%
+    left: 50%
+    font-size: 1.25rem
+    line-height: 125%
+    transform: translate(-50%, -50%)
+  &__img
+    max-width: 100%
+.ultrasound
+  min-height: 730px
+  max-height: min-content
+  margin-bottom: 30px
+  // background-image: url(../img/ultrasound.png)
+  // background-size: cover
+  // background-repeat: no-repeat
+  z-index: 1
+  position: relative
+  overflow: hidden
+  z-index: 1
+  & .background
+    width: 100%
+    height: 100%
+    object-fit: cover
+    position: absolute
+    top: 0      
+    left: 0
+    z-index: -2
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: linear-gradient(rgba(0, 0, 0, 0.4))
+    z-index: -1
+  & .card-text
+    width: 491px
+.angiography
+  margin-bottom: 30px
+  & .card-text
+    width: 475px
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/angiography.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    background: #1D1D1D
+    & .columns
+      width: 92%
+      margin-bottom: -24px
+      margin-left: 24px
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      // margin-right: 96px
+      & span
+        margin-bottom: 1rem
+        color: #7A7F83
+        font-size: 3rem
+        line-height: 125%
+        font-weight: 700
+        display: block
+        text-align: center
+      & .hr-blue
+        width: 100%
+        height: 1px
+        margin-bottom: 16px
+        background: #2B8DDD
+      & .hr-gray
+        width: 100%
+        height: 1px
+        margin-bottom: 16px
+        background: #7A7F83
+      & .column-1
+        width: 20%
+        & span
+          color: #2B8DDD
+      & .column-2
+        width: 20%
+      & .column-3
+        width: 20%
+      & .column-4
+        width: 20%
+.mrt
+  display: flex
+  gap: 30px
+  margin-bottom: 30px
+  & .card-1 .card-text
+    width: 628px
+.operation
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    // background-image: url(../img/mrt.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    flex: 2
+    // background-image: url(../img/operation.png)
+    // background-size: cover
+    // background-repeat: no-repeat    
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+.kt
+  flex-basis: 50%
+  flex-direction: column
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    padding-top: 34px
+    flex: 2
+    // background-image: url(../img/kt.png)
+    // background-size: cover
+    // background-repeat: no-repeat    
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card-text
+      width: 570px
+  & .card-2
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    // background-image: url(../img/endoscopy-small.png)
+    // background-size: cover
+    // background-repeat: no-repeat    
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+.radiography
+  margin-bottom: 30px
+  & .card-text
+      width: 564px
+      margin-bottom: 30px
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    background: #2B8DDD    
+  & .card-2
+    min-height: 350px
+    max-height: min-content
+    background: #1D1D1D
+    & .icon
+      margin-right: 20px
+.bracelets
+  margin-bottom: 6rem
+  & .card-text
+    width: 445px
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/bracelets.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    // background-image: url(../img/colposcope.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    position: relative
+    overflow: hidden
+    z-index: 1
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+@media (max-width: 1800px)
+  .thermal-imager, .angiography, .radiography, .bracelets
+    & .card
+      &-text
+        width: auto
+  .mrt, .kt
+    & .card-1
+      & .card-text
+        width: auto
+@media (max-width: 1199px)
+  .ultrasound
+    min-height: 350px
+  .angiography
+    & .card-2
+      & .columns
+        & span 
+          font-size: 1.75rem
+@media (max-width: 768px)
+  .med-equipment
+    & .card-title
+      font-size: 2.5rem
+  .thermal-imager, .mrt, .radiography, .bracelets, .angiography
+    flex-direction: column
+    & .card
+      min-height: 350px
+      max-height: min-content
+      padding: 4vw
+  .ultrasound
+    padding: 4vw
+    & .card-text
+      width: auto
+  .angiography
+    & .double-card
+      flex-direction: column
+    & .card-2 .columns
+      margin-bottom: 1px
+      margin-left: 1px
+  .circle
+    transform: translateY(0)

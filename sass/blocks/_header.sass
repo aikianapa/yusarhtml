@@ -1,0 +1,35 @@
+.mob-header
+  display: none
+.mis-header
+  &-top
+    min-height: 108px
+    padding-right: 0
+    padding-left: 0
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 4
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & .icon
+      z-index: 2
+  &-menu
+    display: flex
+    &__item
+      margin-right: 36px
+      font-size: 1rem
+      line-height: 125%
+  &__icon-wrapper
+    width: 150px
+    display: flex
+    justify-content: space-between
+@media (max-width: 1599px)
+  .header
+    &-menu
+      display: none
+@media (max-width: 449px)
+  .header
+    padding-top: 30px
+    flex-direction: column

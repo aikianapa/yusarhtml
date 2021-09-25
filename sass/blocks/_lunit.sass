@@ -1,0 +1,281 @@
+.qbody
+  padding-top: 0px
+  min-height: 100vh
+
+.qbody .staging
+  height: 11500px
+  position: relative
+  margin: 0
+
+.qbody .staging .to-fix 
+  position: static
+  top: 0
+  height: 100vh
+  width: 100%
+
+.qbody .staging .to-fix .stage 
+  position: relative
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  & .statistics
+    width: 84vw
+    top: 20vh
+    margin: auto
+    position: absolute
+    left: 8vw
+    display: flex
+    flex-direction: column
+    justify-content: space-between   
+    z-index: 2
+    pointer-events: none
+    & .statistics-1
+      height: 25vh
+      padding-right: 25px
+      padding-left: 25px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      gap: auto
+      overflow: hidden
+    & .statistics-2
+      height: 25vh    
+      padding-right: 25px
+      padding-left: 25px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      gap: auto
+      overflow: hidden
+    &__item
+      width: 15vw
+      height: 7vh
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      transform: translateY(14vh)
+      transition: all 3.5s ease 0.2s
+    &__value
+      display: block
+      font-size: 5.12rem
+      line-height: 130%
+      font-weight: 700
+    &__text
+      display: block
+      font-size: 1rem
+      line-height: 150%
+      font-weight: 500
+      text-align: center
+    &__icon
+      display: block
+      width: 74px
+      height: 61px
+      margin-top: 30px
+      margin-bottom: 24px
+
+.qbody .staging .to-fix .stage .scene 
+  // position: absolute
+
+.qbody .staging .to-fix .stage .scene-1  
+  margin: auto
+  margin-top: 10vh
+  width: 40vw
+  top: 216px
+  left: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  z-index: 5
+  & .title
+    margin-bottom: 40px
+    font-size: 4rem
+    font-weight: 700    
+    text-align: center
+  & .text
+    margin-bottom: 56px
+    font-size: 1rem
+    line-height: 150%
+    font-weight: 500
+    text-align: center
+    color: #E5E5E5
+  & .btn
+    width: 158px
+    min-height: 44px
+    padding: 10px   
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #2F80ED
+    border-radius: 33px
+    font-size: 1rem
+    line-height: 125%
+    font-weight: 400    
+    cursor: pointer
+    // z-index: 10
+.qbody .staging .to-fix .stage .scene-2
+  top: 37vh
+  & .covid_19
+    opacity: 0.999
+    width: 100%
+    height: auto
+    z-index: 1
+  & .covid_10
+    width: 100%
+    height: 100%
+    object-fit: cover
+    position: absolute
+    top: 0      
+    left: 0
+    z-index: -2
+
+.qbody .staging .to-fix .stage .scene-3 
+  position: absolute
+  top: 50%
+  right: 20%
+  background: blue
+
+.qbody .staging .to-fix .stage .scene-4 
+  top: 50%
+  left: 30%
+  background: blue
+
+.qbody .staging-2 .scene 
+  -webkit-transition: all 1s
+  -moz-transition: all 1s
+  -o-transition: all 1s
+  transition: all 1s
+
+.qbody .no-staging 
+  height: auto
+.sqare
+  width: 100px
+  height: 100px
+  padding-top: 10px
+  font-size: 50px
+  text-align: center
+  border: 1px solid #fff
+@media (max-width: 1440px)
+  .qbody .staging .to-fix .stage
+    & .scene-1
+      width: auto
+      & .text
+        width: auto
+    & .statistics
+      & .statistics-1
+        padding-top: 4vh
+      & .statistics-2
+        padding-top: 4vh
+      &__item
+      &__value
+        font-size: 3.5rem
+      &__text
+        width: auto
+        font-size: 12px
+        font-weight: 400
+      &__icon
+        width: 52px
+        height: 43px
+        margin-top: 20px
+        margin-bottom: 15px 
+@media (max-width: 768px)
+  .qbody .staging .to-fix .stage    
+    & .statistics
+      & .statistics-1
+      & .statistics-2
+      &__item
+      &__value
+        font-size: 1.5rem
+      &__text
+      &__icon
+        width: 40px
+        height: 30px
+        margin-top: 0px
+        margin-bottom: 10px 
+    & .scene-2
+      margin-top: 30vh
+@media (max-width: 767px)
+  .mob-header
+    display: block
+    position: static
+    margin-bottom: 50px
+  .mob-mis-top
+    width: 90vw
+    margin: auto
+    margin-top: 100px
+    margin-bottom: 50px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    & .title
+      font-size: 2.5rem
+      margin-bottom: 15px
+      text-align: center
+    & .text
+      width: 90vw
+      font-size: 1rem
+      line-height: 130%
+      font-weight: 400
+      margin-bottom: 20px
+      text-align: center
+    & .btn
+      width: 150px
+  .qbody
+    display: none
+  .mob-statistics
+    background-image: url(../img/Covid_18.jpg)  
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    // background: yellow
+    justify-content: space-between
+    // width: 84vw
+    // top: 20vh
+    // margin: auto
+    // position: absolute
+    // left: 8vw
+    // display: flex
+    // flex-direction: column
+    // justify-content: space-between   
+    // z-index: 2
+    & .statistics-1
+      padding-right: 25px
+      padding-left: 25px
+      display: flex
+      flex-direction: column
+      gap: 20px
+    & .statistics-2  
+      padding-right: 25px
+      padding-left: 25px
+      display: flex
+      flex-direction: column
+      gap: 20px
+    &__item
+      width: 15vw
+      // width: min-content
+      // min-height: 131px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+    &__value
+      font-size: 1.5rem
+      display: block
+      line-height: 130%
+      font-weight: 700
+    &__text
+      display: block
+      font-size: 1rem
+      line-height: 150%
+      font-weight: 500
+      text-align: center
+    &__icon
+      width: 40px
+      height: 30px
+      margin-top: 0px
+      margin-bottom: 10px 

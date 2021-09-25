@@ -1,0 +1,64 @@
+.footer  
+  padding-bottom: 64px
+  &-icon
+    width: 45px
+    margin-right: 15px
+    margin-left: -15px
+  & .btn
+    width: 210px
+    cursor: pointer
+  &__top-wrapper
+    display: flex
+    gap: 30px
+  &__bottom-wrapper
+    display: flex
+    flex-direction: column
+  &__input-group    
+    flex: 1 
+    & input
+      width: 100%
+      padding: 19px 24px
+      height: 54px
+      margin-bottom: 30px
+      background: #F0F5F9
+      border-radius: 5px
+      border: none
+      &::placeholder
+        font-size: 0.94rem
+        line-height: 106%
+        letter-spacing: 0.1px
+        color: #828282
+  &__message
+    height: 143px
+    padding: 22px 24px
+    margin-bottom: 32px
+    background: #F0F5F9
+    border-radius: 5px
+    border: none
+    // resize: none
+    overflow: auto
+    &::placeholder
+        font-size: 0.94rem
+        line-height: 106%
+        letter-spacing: 0.1px
+        color: #828282
+  & .request
+    font-size: 2.25rem
+    line-height: 122%
+  & .mis-request
+    display: block
+    color: #7A7F83
+  & form
+    padding-top: 48px
+    padding-bottom: 32px
+  & .add-doc
+    margin-bottom: 39px
+    display: flex
+    align-items: center
+@media (max-width: 625px)
+  .footer
+    padding-bottom: 20px
+    // margin-bottom: 20px
+    &__top-wrapper
+      flex-direction: column
+      gap: 10px

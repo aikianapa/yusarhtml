@@ -1,0 +1,265 @@
+.about
+  min-height: 610px
+  max-height: min-content
+  margin-bottom: 6rem
+  &-header
+    background-image: url(../img/about.png)
+    background-size: cover
+    background-repeat: no-repeat  
+    z-index: 1  
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card
+    &-title
+      font-size: 4.5rem
+      line-height: 83%
+      font-weight: 700
+    &-text
+      font-size: 1rem
+      line-height: 150%      
+  & .breadcrumb-list
+    display: flex
+    & *
+      font-size: 1rem
+      line-height: 150%
+      color: #BDBDBD
+.team
+  margin-bottom: 30px
+  & .card
+    &-title
+      margin-bottom: 39px
+      &_big
+        width: 120px
+        margin-bottom: 14px
+        line-height: 110%
+        font-weight: 700
+    &-text
+      width: 445px
+      margin-bottom: 38px
+    & .section-title
+      margin-bottom: 10px
+      font-size: 3rem
+      line-height: 125%
+      font-weight: 700
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    flex-basis: 50%
+    background: #2BB2DD
+  & .card-2
+    // display: none
+    // flex: 1
+    flex-basis: 50%
+    // gap: 0
+.our-history
+  flex-direction: column
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    background: #2B8DDD
+    & .card
+      &-title
+        margin-bottom: 17px
+      &-text
+        margin-bottom: 31px
+  & .card-2
+    min-height: 350px
+    max-height: min-content
+    flex: 1
+    // background-image: url(../img/licenses.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card
+      &-title
+        margin-bottom: 12px
+      &-text
+        margin-bottom: 31px
+.partners
+  margin-bottom: 30px
+  & .card-1
+    min-height: 730px
+    max-height: min-content
+    flex: 1
+    // background-image: url(../img/partners.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-text
+    width: 541px
+  & .card-2
+    min-height: 730px
+    max-height: min-content
+    padding-top: 0
+    padding-bottom: 0
+    // padding-top: 99px
+    // padding-bottom: 99px
+    align-items: center
+    // flex: 1
+    background: #1D1D1D    
+    & .swiper-wrapper
+      padding-top: 15px
+      max-height: 730px
+  & .card-icon
+    width: 407px
+    height: 277px
+    align-self: center
+    // display: block
+.realization
+  margin-bottom: 6rem
+  & .card-1
+    flex-basis: 50%
+  & .card-2
+    min-height: 350px
+    max-height: min-content
+    flex-basis: 50%
+    // background-image: url(../img/team.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+    & .card-text
+      width: 445px
+.vacancies
+  flex-direction: column
+  & .card-1
+    min-height: 350px
+    max-height: min-content
+    // background-image: url(../img/reviews.png)
+    // background-size: cover
+    // background-repeat: no-repeat
+    z-index: 1
+    position: relative
+    overflow: hidden
+    & .background
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0      
+      left: 0
+      z-index: -2
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(0, 0, 0, 0.4))
+      z-index: -1
+  & .card-3
+    min-height: 350px
+    max-height: min-content
+    background: #2BC8DD
+    & .card-text
+      width: 445px
+      margin-bottom: 23px
+    & .section-title
+      font-size: 48px
+      line-height: 125%
+      font-weight: 700
+@media (max-width: 1599px)
+  .team
+    & .card
+      &-title_big
+        width: 100%
+      &-text
+        width: auto
+  .partners
+    & .card-1
+      & .card-text
+        width: auto
+    & img
+      width: auto
+  .realization
+    & .card-2 .card-text
+      width: auto
+  .vacancies
+    & .card-3 .card-text
+      width: auto
+@media (max-width: 1199px)
+  .partners
+    & .card-1
+      min-height: 500px    
+    & .card-2
+      min-height: 500px
+      & img
+        width: 100%
+@media (max-width: 768px)
+  .about
+    & .card-title
+      font-size: 2.5rem
+  .team
+    & .card
+      & .section-title
+        font-size: 1.35rem
+  .team, .partners, .realization
+    & .double-card
+      flex-direction: column
+    & .card
+      padding: 4vw
