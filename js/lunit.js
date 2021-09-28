@@ -13,7 +13,7 @@ $(function () {
         {
           alias: "fixing",
           from: "con-top = top",
-          to: "con-top + 12000 = bottom",
+          to: "con-top + 3000 = bottom",
           css: {
             position: "fixed",
             top: "",
@@ -23,7 +23,7 @@ $(function () {
         },
         {
           alias: "unfixing",
-          from: "con-top + 12000 = bottom",
+          from: "con-top + 3000 = bottom",
           to: "doc-bottom",
           css: {
             position: "absolute",
@@ -84,64 +84,42 @@ $(function () {
       [
         {
           from: "con-top + 600 = top",
-          to: "con-top + 3800 = top",
+          to: "con-top + 2900 = top",
           cssFrom: {
             opacity: "0.999",
           },
           cssTo: {
             opacity: "0.001",
           },
-        },
-        {
-          from: "con-top + 4000 = top",
-          to: "con-top + 4400 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.29",
-          },
-        },
+        }
       ],
       $(".staging-1")
     );
 
-    $(".staging-1 .st1").scroolly(
+for(i=1;i<=20;i++) {
+
+    let start = 500 + i*40;
+    let stop = 1000 + i*40;
+
+    $(".staging-1 .st"+i).scroolly(
       [
         {
-          from: "con-top + 4500 = top",
-          to: "con-top + 4700 = top",
+          from: "con-top + "+start+" = top",
+          to: "con-top + "+stop+" = top",
           cssFrom: {
-            transform: "translateY(14vh)",
+            transform: "translateY(21vh)",
+            opacity: 0
           },
           cssTo: {
-            transform: "translateY(9.5vh)",
+            transform: "translateY(1vh)",
+            opacity: 1
           },
-        },
-        {
-          from: "con-top + 4700 = top",
-          to: "con-top + 4900 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 4900 = top",
-          to: "con-top + 5100 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
+        }
       ],
       $(".staging-1")
     );
-
+  }
+/*
     $(".staging-1 .st2").scroolly(
       [
         {
@@ -626,6 +604,8 @@ $(function () {
       $(".staging-1")
     );
 
+*/
+
     $(".staging-1 .scene-2").scroolly(
       [
         {
@@ -642,21 +622,6 @@ $(function () {
       $(".staging-1")
     );
 
-    $(".staging-1 .statistics").scroolly(
-      [
-        {
-          from: "con-top + 10000 = top",
-          to: "con-top + 11000 = top",
-          cssFrom: {
-            transform: "translateY(-0.01vh)",
-          },
-          cssTo: {
-            transform: "translateY(-70vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
 
     $(".staging-1 .mis-header-top").scroolly(
       [
