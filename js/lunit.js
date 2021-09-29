@@ -1,5 +1,5 @@
 $(function () {
-  if ($(window).width() > 767) {
+  if ($(window).width() > 0) {
     $(".to-fix").scroolly(
       [
         {
@@ -73,539 +73,134 @@ $(function () {
           },
           cssTo: {
             top: "37vh",
-            transform: "translateY(-35vh)",
+            transform: "translateY(-37vh)",
           },
         },
       ],
       $(".staging-1")
     );
 
-    $(".staging-1 .covid_19").scroolly(
-      [
-        {
-          from: "con-top + 600 = top",
-          to: "con-top + 2900 = top",
-          cssFrom: {
-            opacity: "0.999",
-          },
-          cssTo: {
-            opacity: "0.001",
-          },
+// Картинки //
+    var start = 500;
+    var stop = 2000;
+    var images = $(".staging-1 .scene-2 img").length + 1;
+    var offset = [];
+
+    for (i = 0; i < images; i++) {
+      let os = Math.ceil((stop - start) / images);
+      offset[i] = start + os * (i + 1);
+      if (i !== 0) {
+        if (i + 1 < images) {
+          $(".staging-1 .scene-2 img:eq(" + (i - 1) + ")").scroolly([
+            {
+              from: "con-top + " + (offset[i - 1]) + " = top",
+              to: "con-top + " + (offset[i]) + " = top",
+              cssFrom: {
+                "opacity": "0.999",
+              },
+              cssTo: {
+                "opacity": "0.001",
+                "z-index": "0"
+              },
+            }
+          ],
+            $(".staging-1")
+          );
         }
-      ],
-      $(".staging-1")
-    );
 
-for(i=1;i<=20;i++) {
+        $(".staging-1 .scene-2 img:eq(" + i + ")").scroolly(
+          [
+            {
+              from: "con-top + " + (offset[i - 1]) + " = top",
+              to: "con-top + " + (offset[i]) + " = top",
+              cssFrom: {
+                "opacity": "0.001",
+                "z-index": 1 + i
+              },
+              cssTo: {
+                "opacity": "0.999",
+                "z-index": 1 + i
+              },
+            },
+            {
+              from: "con-top + " + (offset[i + 1]) + " = top",
+              to: "con-top + " + (offset[i + 1] + 1) + " = top",
+              cssFrom: {
+                "opacity": "0.999",
+              },
+              cssTo: {
+                "opacity": "0.001",
+              },
+            }
 
-    let start = 500 + i*40;
-    let stop = 1000 + i*40;
+          ],
+          $(".staging-1")
+        );
+      }
+    }
+// ========= //
 
-    $(".staging-1 .st"+i).scroolly(
-      [
-        {
-          from: "con-top + "+start+" = top",
-          to: "con-top + "+stop+" = top",
-          cssFrom: {
-            transform: "translateY(21vh)",
-            opacity: 0
-          },
-          cssTo: {
-            transform: "translateY(1vh)",
-            opacity: 1
-          },
-        }
-      ],
-      $(".staging-1")
-    );
-  }
+
+// Плашки //
+    for (i = 1; i <= 20; i++) {
+
+      let start = 500 + i * 30;
+      let stop = 1000 + i * 30;
+
+      if ($(window).width() > 767) {
+        $(".staging-1 .st" + i).scroolly(
+          [
+            {
+              from: "con-top + " + start + " = top",
+              to: "con-top + " + stop + " = top",
+              cssFrom: {
+                transform: "translateY(" + i * 10 + "vh)",
+                opacity: "0"
+              },
+              cssTo: {
+                transform: "translateY(1vh)",
+                opacity: "0.7"
+              },
+            }
+          ],
+          $(".staging-1")
+        );
+      } else {
+        let height = $(".staging-1 .st1").height();
+        $(".staging-1 .st" + i).scroolly(
+          [
+            {
+              from: "con-top + " + start + " = top",
+              to: "con-top + " + start + height + " = top",
+              cssFrom: {
+                transform: "translateY(-"+height+"px)",
+                opacity: "1"
+              },
+              cssTo: {
+                transform: "translateY(0px)",
+                opacity: "1"
+              },
+            },
+              {
+                from: "con-top + " + start + height + " = top",
+                to: "con-top + " + start + height + height + " = top",
+                cssFrom: {
+                  transform: "translateY(0px)",
+                  opacity: "1"
+                },
+                cssTo: {
+                  transform: "translateY("+height+"px)",
+                  opacity: "1"
+                },
+              }
+          ],
+          $(".staging-1")
+        );
+
+      }
+
+    }
 /*
-    $(".staging-1 .st2").scroolly(
-      [
-        {
-          from: "con-top + 4800 = top",
-          to: "con-top + 5100 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st3").scroolly(
-      [
-        {
-          from: "con-top + 4900 = top",
-          to: "con-top + 5100 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 5100 = top",
-          to: "con-top + 5300 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 5300 = top",
-          to: "con-top + 5500 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st4").scroolly(
-      [
-        {
-          from: "con-top + 5200 = top",
-          to: "con-top + 5500 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st5").scroolly(
-      [
-        {
-          from: "con-top + 5300 = top",
-          to: "con-top + 5500 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 5500 = top",
-          to: "con-top + 5700 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 5700 = top",
-          to: "con-top + 5900 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st6").scroolly(
-      [
-        {
-          from: "con-top + 5600 = top",
-          to: "con-top + 5900 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st7").scroolly(
-      [
-        {
-          from: "con-top + 5700 = top",
-          to: "con-top + 5900 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 5900 = top",
-          to: "con-top + 6100 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 6100 = top",
-          to: "con-top + 6300 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st8").scroolly(
-      [
-        {
-          from: "con-top + 6000 = top",
-          to: "con-top + 6300 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st9").scroolly(
-      [
-        {
-          from: "con-top + 6100 = top",
-          to: "con-top + 6300 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 6300 = top",
-          to: "con-top + 6500 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 6500 = top",
-          to: "con-top + 6700 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st10").scroolly(
-      [
-        {
-          from: "con-top + 6400 = top",
-          to: "con-top + 6700 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st11").scroolly(
-      [
-        {
-          from: "con-top + 6500 = top",
-          to: "con-top + 6700 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 6700 = top",
-          to: "con-top + 6900 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 6900 = top",
-          to: "con-top + 7100 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st12").scroolly(
-      [
-        {
-          from: "con-top + 6800 = top",
-          to: "con-top + 7100 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st13").scroolly(
-      [
-        {
-          from: "con-top + 6900 = top",
-          to: "con-top + 7100 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 7100 = top",
-          to: "con-top + 7300 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 7300 = top",
-          to: "con-top + 7500 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st14").scroolly(
-      [
-        {
-          from: "con-top + 7200 = top",
-          to: "con-top + 7500 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st15").scroolly(
-      [
-        {
-          from: "con-top + 7300 = top",
-          to: "con-top + 7500 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 7500 = top",
-          to: "con-top + 7700 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 7700 = top",
-          to: "con-top + 7900 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st16").scroolly(
-      [
-        {
-          from: "con-top + 7600 = top",
-          to: "con-top + 7900 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st17").scroolly(
-      [
-        {
-          from: "con-top + 7700 = top",
-          to: "con-top + 7900 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 7900 = top",
-          to: "con-top + 8100 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 8100 = top",
-          to: "con-top + 8300 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st18").scroolly(
-      [
-        {
-          from: "con-top + 8000 = top",
-          to: "con-top + 8300 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st19").scroolly(
-      [
-        {
-          from: "con-top + 8100 = top",
-          to: "con-top + 8300 = top",
-          cssFrom: {
-            transform: "translateY(14vh)",
-          },
-          cssTo: {
-            transform: "translateY(9.5vh)",
-          },
-        },
-        {
-          from: "con-top + 8300 = top",
-          to: "con-top + 8500 = top",
-          cssFrom: {
-            transform: "translateY(9.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(4.5vh)",
-          },
-        },
-        {
-          from: "con-top + 8500 = top",
-          to: "con-top + 8700 = top",
-          cssFrom: {
-            transform: "translateY(4.5vh)",
-          },
-          cssTo: {
-            transform: "translateY(0vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-    $(".staging-1 .st20").scroolly(
-      [
-        {
-          from: "con-top + 8400 = top",
-          to: "con-top + 8700 = top",
-          cssFrom: {
-            opacity: "0.001",
-          },
-          cssTo: {
-            opacity: "0.7",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-
-*/
-
     $(".staging-1 .scene-2").scroolly(
       [
         {
@@ -621,7 +216,7 @@ for(i=1;i<=20;i++) {
       ],
       $(".staging-1")
     );
-
+*/
 
     $(".staging-1 .mis-header-top").scroolly(
       [

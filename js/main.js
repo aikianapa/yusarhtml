@@ -144,6 +144,8 @@ $(document).ready(function () {
     },
   });
 
+  /*
+
   //растущие числа
   var number1 = document.querySelector(".number-1"),
     number1Top = number1.getBoundingClientRect().top,
@@ -263,6 +265,7 @@ $(document).ready(function () {
       }, 120);
     }
   });
+*/
 
   $(document).scroll(function () {
     const top = window.pageYOffset;

@@ -4327,14 +4327,14 @@ main .tsami .card-text {
 }
 
 .qbody .staging {
-    height: 2900px;
+    height: 3000px;
     position: relative;
     margin: 0
 }
 
 .qbody .staging .to-fix {
     position: static;
-    top: 0;
+    top: auto;
     height: 100vh;
     width: 100%
 }
@@ -4406,7 +4406,7 @@ main .tsami .card-text {
 
 .qbody .staging .to-fix .stage .statistics__item {
     width: 15vw;
-    height: 7vh;
+    height: 14vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4420,8 +4420,8 @@ main .tsami .card-text {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-transform: translateY(14vh);
-    transform: translateY(14vh);
+    -webkit-transform: translateY(24vh);
+    transform: translateY(24vh);
     -webkit-transition: all 0.2s ease 0.2s;
     transition: all 0.2s ease 0.2s
 }
@@ -4444,7 +4444,7 @@ main .tsami .card-text {
 .qbody .staging .to-fix .stage .statistics__icon {
     display: block;
     width: 74px;
-    height: 61px;
+    height: 5.12rem;
     margin-top: 30px;
     margin-bottom: 24px
 }
@@ -4512,22 +4512,21 @@ main .tsami .card-text {
     top: 37vh
 }
 
-.qbody .staging .to-fix .stage .scene-2 .covid_19 {
-    opacity: 0.999;
+.qbody .staging .to-fix .stage .scene-2 img {
+    opacity: 0;
     width: 100%;
     height: auto;
-    z-index: 1
-}
-
-.qbody .staging .to-fix .stage .scene-2 .covid_10 {
-    width: 100%;
-    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2
+    z-index: -2;
+
+}
+
+.qbody .staging .to-fix .stage .scene-2 img:nth-child(1) {
+    opacity:1;
 }
 
 .qbody .staging .to-fix .stage .scene-3 {
@@ -4660,8 +4659,42 @@ main .tsami .card-text {
     }
 
     .qbody {
-        display: none
+    /*    display: none*/
     }
+
+    .qbody .staging .to-fix .stage .scene-1 .title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        text-align: center
+    }
+
+    .qbody .staging .to-fix .stage .scene-1 .text {
+        width: 90vw;
+        font-size: 1rem;
+        line-height: 130%;
+        font-weight: 400;
+        margin-bottom: 20px;
+        text-align: center
+    }
+
+    .qbody .staging .to-fix .stage .statistics .statistics-1 {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .qbody .staging .to-fix .stage .statistics .statistics-2 {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .qbody .staging .to-fix .stage .statistics__item {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
 
     .mob-statistics {
         background-image: url(../img/Covid_18.jpg);
