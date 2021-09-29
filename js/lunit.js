@@ -1,3 +1,6 @@
+setTimeout(function(){
+  window.scrollTo(0, 0);
+},1000)
 $(function () {
   if ($(window).width() > 0) {
     $(".to-fix").scroolly(
@@ -80,7 +83,7 @@ $(function () {
       $(".staging-1")
     );
 
-// Картинки //
+    // Картинки //
     var start = 500;
     var stop = 2000;
     var images = $(".staging-1 .scene-2 img").length + 1;
@@ -123,8 +126,8 @@ $(function () {
               },
             },
             {
-              from: "con-top + " + (offset[i + 1]) + " = top",
-              to: "con-top + " + (offset[i + 1] + 1) + " = top",
+              from: "con-top + " + (offset[i + 1]) + 1 + " = top",
+              to: "con-top + " + (offset[i + 1] + 2) + " = top",
               cssFrom: {
                 "opacity": "0.999",
               },
@@ -138,17 +141,23 @@ $(function () {
         );
       }
     }
-// ========= //
+    // ========= //
 
 
-// Плашки //
-    for (i = 1; i <= 20; i++) {
-
-      let start = 500 + i * 30;
-      let stop = 1000 + i * 30;
+    // Плашки //
+    var offset = [];
+    var plates = $('.statistics.mis-container').find('.statistics__item').length;
+    var height = $(".staging-1 .statistics-1").height();
+    var start = 500;
+    var os = Math.ceil((stop - start) / plates);
+    offset[0] = start;
+    for (i = 1; i <= plates; i++) {
 
       if ($(window).width() > 767) {
-        $(".staging-1 .st" + i).scroolly(
+        let start = 400 + (i * 60);
+        let stop = 1000 + (i * 60);
+
+        $(".staging-1 .statistics__item:eq(" + (i - 1) + ")").scroolly(
           [
             {
               from: "con-top + " + start + " = top",
@@ -166,33 +175,37 @@ $(function () {
           $(".staging-1")
         );
       } else {
-        let height = $(".staging-1 .st1").height();
-        $(".staging-1 .st" + i).scroolly(
+        offset[i] = start + (os * i);
+        offset[i+1] = start + (os * (i+1));
+        $('.statistics.mis-container').height(height);
+        $('.statistics.mis-container > div').height(height);
+        $('.statistics.mis-container .statistics__item').height(height);
+        $(".staging-1 .statistics__item:eq(" + (i - 1) + ")").scroolly(
           [
             {
-              from: "con-top + " + start + " = top",
-              to: "con-top + " + start + height + " = top",
+              from: "con-top + " + (offset[i - 1]) + " = top",
+              to: "con-top + " + (offset[i]) + " = top",
               cssFrom: {
-                transform: "translateY(-"+height+"px)",
-                opacity: "1"
+                top: height*2+"px",
+                opacity: "0.001"
               },
               cssTo: {
-                transform: "translateY(0px)",
-                opacity: "1"
+                top: (-height)+"px",
+                opacity: "0.999"
               },
             },
-              {
-                from: "con-top + " + start + height + " = top",
-                to: "con-top + " + start + height + height + " = top",
-                cssFrom: {
-                  transform: "translateY(0px)",
-                  opacity: "1"
-                },
-                cssTo: {
-                  transform: "translateY("+height+"px)",
-                  opacity: "1"
-                },
-              }
+            {
+              from: "con-top + " + (offset[i + 1]) + " = top",
+              to: "con-top + " + (offset[i + 1] + height) + " = top",
+              cssFrom: {
+                top: (-height)+"px",
+                opacity: "0.999"
+              },
+              cssTo: {
+                top: (-height*2)+"px",
+                opacity: "0.001"
+              },
+            }
           ],
           $(".staging-1")
         );
@@ -200,23 +213,23 @@ $(function () {
       }
 
     }
-/*
-    $(".staging-1 .scene-2").scroolly(
-      [
-        {
-          from: "con-top + 10000 = top",
-          to: "con-top + 11000 = top",
-          cssFrom: {
-            transform: "translateY(-35vh)",
-          },
-          cssTo: {
-            transform: "translateY(-100vh)",
-          },
-        },
-      ],
-      $(".staging-1")
-    );
-*/
+    /*
+        $(".staging-1 .scene-2").scroolly(
+          [
+            {
+              from: "con-top + 10000 = top",
+              to: "con-top + 11000 = top",
+              cssFrom: {
+                transform: "translateY(-35vh)",
+              },
+              cssTo: {
+                transform: "translateY(-100vh)",
+              },
+            },
+          ],
+          $(".staging-1")
+        );
+    */
 
     $(".staging-1 .mis-header-top").scroolly(
       [

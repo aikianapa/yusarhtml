@@ -4422,8 +4422,8 @@ main .tsami .card-text {
     justify-content: space-between;
     -webkit-transform: translateY(24vh);
     transform: translateY(24vh);
-    -webkit-transition: all 0.2s ease 0.2s;
-    transition: all 0.2s ease 0.2s
+    -webkit-transition: all 0.5s ease 0.5s;
+    transition: all 0.5s ease 0.5s
 }
 
 .qbody .staging .to-fix .stage .statistics__value {
@@ -4522,8 +4522,8 @@ main .tsami .card-text {
     top: 0;
     left: 0;
     z-index: -2;
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 
 }
 
@@ -4597,24 +4597,12 @@ main .tsami .card-text {
     }
 }
 
-@media (max-width: 768px) {
-    .qbody .staging .to-fix .stage .statistics__value {
-        font-size: 1.5rem
-    }
-
-    .qbody .staging .to-fix .stage .statistics__icon {
-        width: 40px;
-        height: 30px;
-        margin-top: 0px;
-        margin-bottom: 10px
-    }
-
-    .qbody .staging .to-fix .stage .scene-2 {
-        margin-top: 0vh
-    }
-}
 
 @media (max-width: 767px) {
+
+
+
+
     .mob-header {
         display: block;
         position: static;
@@ -4679,23 +4667,48 @@ main .tsami .card-text {
         text-align: center
     }
 
-    .qbody .staging .to-fix .stage .statistics .statistics-1 {
+    .qbody .staging .to-fix .stage .statistics .statistics-1,
+    .qbody .staging .to-fix .stage .statistics .statistics-2 {
+        position: absolute;
         display: block;
         width: 100%;
         text-align: center;
+        padding: 0;
+
     }
 
-    .qbody .staging .to-fix .stage .statistics .statistics-2 {
+    .qbody .staging .to-fix .stage .statistics {
+        overflow: hidden;
         display: block;
-        width: 100%;
-        text-align: center;
+        height: 20vh;
     }
 
     .qbody .staging .to-fix .stage .statistics__item {
-        position: relative;
+        position: absolute;
         width: 100%;
         display: block;
+        top: 100px;
+        -webkit-transition: opacity 0.1s ease 0s;
+        transition: opacity 0.1s ease 0s
     }
+
+    .qbody .staging .to-fix .stage .statistics__value {
+        font-size: 3.5rem
+    }
+
+    .qbody .staging .to-fix .stage .statistics__icon {
+        padding-top: 0.5rem;
+        width: auto;
+        height: 3.5rem;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        display: inline;
+    }
+
+    .qbody .staging .to-fix .stage .scene-2 {
+        margin-top: 0vh
+    }
+
 
 
     .mob-statistics {
