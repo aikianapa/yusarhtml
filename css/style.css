@@ -4522,6 +4522,8 @@ main .tsami .card-text {
     top: 0;
     left: 0;
     z-index: -2;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
 
 }
 
