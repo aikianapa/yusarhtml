@@ -4674,7 +4674,6 @@ main .tsami .card-text {
         width: 100%;
         text-align: center;
         padding: 0;
-
     }
 
     .qbody .staging .to-fix .stage .statistics {
@@ -4688,8 +4687,8 @@ main .tsami .card-text {
         width: 100%;
         display: block;
         top: 100px;
-        -webkit-transition: opacity 0.1s ease 0s;
-        transition: opacity 0.1s ease 0s
+        -webkit-transition: all 0.2s ;
+        transition: all 0.2s ;
     }
 
     .qbody .staging .to-fix .stage .statistics__value {

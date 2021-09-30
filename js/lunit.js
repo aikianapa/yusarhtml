@@ -1,6 +1,6 @@
 setTimeout(function(){
   window.scrollTo(0, 0);
-},1000)
+},400)
 $(function () {
   if ($(window).width() > 0) {
     $(".to-fix").scroolly(
@@ -184,9 +184,9 @@ $(function () {
           [
             {
               from: "con-top + " + (offset[i - 1]) + " = top",
-              to: "con-top + " + (offset[i]) + " = top",
+              to: "con-top + " + (offset[i] - 1) + " = top",
               cssFrom: {
-                top: height*2+"px",
+                top: height+"px",
                 opacity: "0.001"
               },
               cssTo: {
@@ -195,15 +195,24 @@ $(function () {
               },
             },
             {
-              from: "con-top + " + (offset[i + 1]) + " = top",
-              to: "con-top + " + (offset[i + 1] + height) + " = top",
+              from: "con-top + " + (offset[i]) + " = top",
+              to: "con-top + " + (offset[i + 1] - 1) + " = top",
               cssFrom: {
-                top: (-height)+"px",
                 opacity: "0.999"
               },
               cssTo: {
-                top: (-height*2)+"px",
                 opacity: "0.001"
+              },
+            }
+            ,
+            {
+              from: "con-top + " + (offset[i + 1]) + " = top",
+              to: "con-top + " + (offset[i + 1] + 1) + " = top",
+              cssFrom: {
+                top: (-height*2)+"px",
+              },
+              cssTo: {
+                top: (-height*2)+"px",
               },
             }
           ],
