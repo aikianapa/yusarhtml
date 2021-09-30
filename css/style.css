@@ -4692,7 +4692,11 @@ main .tsami .card-text {
     }
 
     .qbody .staging .to-fix .stage .statistics__value {
-        font-size: 3.5rem
+        font-size: 3rem
+    }
+
+    .qbody .staging .to-fix .stage .statistics__text {
+        font-size: 1rem
     }
 
     .qbody .staging .to-fix .stage .statistics__icon {
