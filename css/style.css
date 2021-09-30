@@ -4509,7 +4509,10 @@ main .tsami .card-text {
 }
 
 .qbody .staging .to-fix .stage .scene-2 {
-    top: 37vh
+    top: 50vh;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .qbody .staging .to-fix .stage .scene-2 img {
