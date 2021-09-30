@@ -144,10 +144,9 @@ $(document).ready(function () {
     },
   });
 
-  /*
-
+  
   //растущие числа
-  var number1 = document.querySelector(".number-1"),
+  if (document.querySelector(".number-1")) var number1 = document.querySelector(".number-1"),
     number1Top = number1.getBoundingClientRect().top,
     start1 = +number1.innerHTML,
     end1 = +number1.dataset.max;
@@ -172,7 +171,7 @@ $(document).ready(function () {
       }
     });
   }
-  var number2 = document.querySelector(".number-2"),
+  if (document.querySelector(".number-2")) var number2 = document.querySelector(".number-2"),
     number2Top = number2.getBoundingClientRect().top,
     start2 = +number2.innerHTML,
     end2 = +number2.dataset.max;
@@ -265,7 +264,7 @@ $(document).ready(function () {
       }, 120);
     }
   });
-*/
+
 
   $(document).scroll(function () {
     const top = window.pageYOffset;

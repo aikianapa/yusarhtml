@@ -2,6 +2,7 @@ setTimeout(function(){
   window.scrollTo(0, 0);
 },400)
 $(function () {
+  var ht = $('.qbody .staging ').height();
   if ($(window).width() > 0) {
     $(".to-fix").scroolly(
       [
@@ -16,7 +17,7 @@ $(function () {
         {
           alias: "fixing",
           from: "con-top = top",
-          to: "con-top + 3000 = bottom",
+          to: "con-top + "+ht+" = bottom",
           css: {
             position: "fixed",
             top: "",
@@ -26,7 +27,7 @@ $(function () {
         },
         {
           alias: "unfixing",
-          from: "con-top + 3000 = bottom",
+          from: "con-top + "+ht+" = bottom",
           to: "doc-bottom",
           css: {
             position: "absolute",
@@ -85,7 +86,7 @@ $(function () {
 
     // Картинки //
     var start = 500;
-    var stop = 2000;
+    var stop = 4000;
     var images = $(".staging-1 .scene-2 img").length + 1;
     var offset = [];
 
