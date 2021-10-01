@@ -9,7 +9,7 @@
 
 .qbody .staging .to-fix 
   position: static
-  top: 0
+  top: auto
   height: 100vh
   width: 100%
 
@@ -51,13 +51,13 @@
       overflow: hidden
     &__item
       width: 15vw
-      height: 7vh
+      height: 14vh
       display: flex
       flex-direction: column
       align-items: center
       justify-content: space-between
-      transform: translateY(14vh)
-      transition: all 3.5s ease 0.2s
+      transform: translateY(32vh)
+      transition: all 0.5s ease 0.5s
     &__value
       display: block
       font-size: 5.12rem
@@ -72,7 +72,7 @@
     &__icon
       display: block
       width: 74px
-      height: 61px
+      height: 5.12rem
       margin-top: 30px
       margin-bottom: 24px
 
@@ -117,20 +117,36 @@
     cursor: pointer
     // z-index: 10
 .qbody .staging .to-fix .stage .scene-2
-  top: 37vh
-  & .covid_19
-    opacity: 0.999
+  top: 50vh
+  max-width: 800px
+  margin-left: auto
+  margin-right: auto
+  & img
+    opacity: 0
     width: 100%
     height: auto
-    z-index: 1
-  & .covid_10
-    width: 100%
-    height: 100%
     object-fit: cover
     position: absolute
-    top: 0      
+    top: 0
     left: 0
     z-index: -2
+    transition: all 0.3s ease-out
+  & img:nth-child(1)
+    opacity: 1
+
+  // & .covid_19
+  //   opacity: 0.999
+  //   width: 100%
+  //   height: auto
+  //   z-index: 1
+  // & .covid_10
+  //   width: 100%
+  //   height: 100%
+  //   object-fit: cover
+  //   position: absolute
+  //   top: 0      
+  //   left: 0
+  //   z-index: -2
 
 .qbody .staging .to-fix .stage .scene-3 
   position: absolute
@@ -143,10 +159,7 @@
   left: 30%
   background: blue
 
-.qbody .staging-2 .scene 
-  -webkit-transition: all 1s
-  -moz-transition: all 1s
-  -o-transition: all 1s
+.qbody .staging-2 .scene
   transition: all 1s
 
 .qbody .no-staging 
@@ -181,117 +194,11 @@
         height: 43px
         margin-top: 20px
         margin-bottom: 15px 
-@media (max-width: 768px)
-  .qbody .staging .to-fix .stage    
-    & .statistics
-      & .statistics-1
-      & .statistics-2
-      &__item
-        position: absolute
-        width: 100%
-        display: block
-        top: 100px
-        transition: all 0.2s
-      &__value
-        font-size: 3rem
-      &__text
-      &__icon
-        width: auto
-        height: 3.5rem
-        padding-top: 0.5rem
-        margin-top: 0px
-        margin-bottom: 10px 
-        display: inline
-    & .scene-2
-      margin-top: 30vh
-@media (max-width: 767px)
-  // .mob-header
-  //   display: block
-  //   position: static
-  //   margin-bottom: 50px
-  // .mob-mis-top
-  //   width: 90vw
-  //   margin: auto
-  //   margin-top: 100px
-  //   margin-bottom: 50px
-  //   display: flex
-  //   flex-direction: column
-  //   align-items: center
-  //   justify-content: space-between
-  //   & .title
-  //     font-size: 2.5rem
-  //     margin-bottom: 15px
-  //     text-align: center
-  //   & .text
-  //     width: 90vw
-  //     font-size: 1rem
-  //     line-height: 130%
-  //     font-weight: 400
-  //     margin-bottom: 20px
-  //     text-align: center
-  //   & .btn
-  //     width: 150px
-  // .qbody
-  //   // display: none
-  // .mob-statistics
-  //   background-image: url(../img/Covid_18.jpg)  
-  //   background-position: center
-  //   background-repeat: no-repeat
-  //   background-size: cover
-  //   display: flex
-  //   // background: yellow
-  //   justify-content: space-between
-  //   // width: 84vw
-  //   // top: 20vh
-  //   // margin: auto
-  //   // position: absolute
-  //   // left: 8vw
-  //   // display: flex
-  //   // flex-direction: column
-  //   // justify-content: space-between   
-  //   // z-index: 2
-  //   & .statistics-1
-  //     padding-right: 25px
-  //     padding-left: 25px
-  //     display: flex
-  //     flex-direction: column
-  //     gap: 20px
-  //   & .statistics-2  
-  //     padding-right: 25px
-  //     padding-left: 25px
-  //     display: flex
-  //     flex-direction: column
-  //     gap: 20px
-  //   &__item
-  //     width: 15vw
-  //     // width: min-content
-  //     // min-height: 131px
-  //     display: flex
-  //     flex-direction: column
-  //     align-items: center
-  //     justify-content: space-between
-  //   &__value
-  //     font-size: 1.5rem
-  //     display: block
-  //     line-height: 130%
-  //     font-weight: 700
-  //   &__text
-  //     display: block
-  //     font-size: 1rem
-  //     line-height: 150%
-  //     font-weight: 500
-  //     text-align: center
-  //   &__icon
-  //     width: 40px
-  //     height: 30px
-  //     margin-top: 0px
-  //     margin-bottom: 10px 
+@media (max-width: 767px)  
   .qbody .staging .to-fix .stage .scene-1 .title 
     font-size: 2.5rem
     margin-bottom: 15px
     text-align: center
-    
-
   .qbody .staging .to-fix .stage .scene-1 .text 
     width: 90vw
     font-size: 1rem
@@ -299,22 +206,16 @@
     font-weight: 400
     margin-bottom: 20px
     text-align: center
-  
-
   .qbody .staging .to-fix .stage .statistics .statistics-1, .qbody .staging .to-fix .stage .statistics .statistics-2 
     position: absolute
     display: block
     width: 100%
     text-align: center
     padding: 0
-  
-
   .qbody .staging .to-fix .stage .statistics 
     overflow: hidden
     display: block
     height: 20vh
-  
-
   .qbody .staging .to-fix .stage .statistics__item 
     position: absolute
     width: 100%
@@ -322,16 +223,10 @@
     top: 100px
     -webkit-transition: all 0.2s 
     transition: all 0.2s 
-  
-
   .qbody .staging .to-fix .stage .statistics__value 
-    font-size: 3rem
-  
-
+    font-size: 5rem
   .qbody .staging .to-fix .stage .statistics__text 
     font-size: 1rem
-  
-
   .qbody .staging .to-fix .stage .statistics__icon 
     padding-top: 0.5rem
     width: auto
@@ -339,14 +234,8 @@
     margin-top: 0px
     margin-bottom: 10px
     display: inline
-  
-
   .qbody .staging .to-fix .stage .scene-2 
     margin-top: 0vh
-  
-
-
-
   .mob-statistics 
     background-image: url(../img/Covid_18.jpg)
     background-position: center
@@ -358,8 +247,6 @@
     -webkit-box-pack: justify
     -ms-flex-pack: justify
     justify-content: space-between
-  
-
   .mob-statistics .statistics-1 
     padding-right: 25px
     padding-left: 25px
@@ -371,8 +258,6 @@
     -ms-flex-direction: column
     flex-direction: column
     gap: 20px
-  
-
   .mob-statistics .statistics-2 
     padding-right: 25px
     padding-left: 25px
@@ -384,8 +269,6 @@
     -ms-flex-direction: column
     flex-direction: column
     gap: 20px
-  
-
   .mob-statistics__item 
     width: 15vw
     display: -webkit-box
@@ -401,24 +284,22 @@
     -webkit-box-pack: justify
     -ms-flex-pack: justify
     justify-content: space-between
-  
-
   .mob-statistics__value 
     font-size: 1.5rem
     display: block
     line-height: 130%
     font-weight: 700
-  
-
   .mob-statistics__text 
     display: block
     font-size: 1rem
     line-height: 150%
     font-weight: 500
     text-align: center
-
   .mob-statistics__icon 
     width: 40px
     height: 30px
     margin-top: 0px
     margin-bottom: 10px
+@media (max-width: 374px)
+  .qbody .staging .to-fix .stage .statistics__item
+    transform: translateY(25vh)

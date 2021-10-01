@@ -681,16 +681,18 @@
 @media (max-width: 767px)
   .mis
     &-nav
-      align-items: center
-      flex-direction: column
+      flex-wrap: wrap
     &-menu
-      flex-direction: column
+      &__item        
+      &-wrapper
+        position: sticky
+        top: 0
   .purpose, .description, .benefits, .special, .reviews
     padding-top: 20px
   .reviews, .products
     &__button
       &-prev, &-next
-        display: none
+        display: none  
 @media (max-width: 599px)
   .statistics-1, .statistics-2
     flex-direction: column
@@ -708,5 +710,6 @@
 @media (max-width: 374px)
   .components__item
     flex-wrap: wrap
-
+  .qbody .staging .to-fix .stage .statistics__item
+    transform: translateY(25vh)
 
