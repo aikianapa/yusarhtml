@@ -4630,8 +4630,8 @@ main .tsami .card-text {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-transform: translateY(34vh);
-  transform: translateY(34vh);
+  -webkit-transform: translateY(32vh);
+  transform: translateY(32vh);
   -webkit-transition: all 0.5s ease 0.5s;
   transition: all 0.5s ease 0.5s;
 }
@@ -5396,3 +5396,23 @@ main .tsami .card-text {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (max-width: 374px) {
+  /* .qbody .staging .to-fix .stage .statistics .statistics {
+    overflow: auto;
+    position: relative;
+  }
+  .qbody .staging .to-fix .stage .statistics .statistics-1 {
+    position: relative;
+    overflow: visible;
+  }
+  .qbody .staging .to-fix .stage .statistics .statistics-2 {
+    overflow: visible;
+  } */
+  .qbody .staging .to-fix .stage .statistics__item {
+    /* position: absolute; */
+    -webkit-transform: translateY(25vh);
+    transform: translateY(25vh);
+    /* z-index: 5; */
+  }
+}
