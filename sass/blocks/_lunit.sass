@@ -3,7 +3,7 @@
   min-height: 100vh
 
 .qbody .staging
-  height: 11500px
+  height: 4000px
   position: relative
   margin: 0
 
@@ -187,95 +187,238 @@
       & .statistics-1
       & .statistics-2
       &__item
+        position: absolute
+        width: 100%
+        display: block
+        top: 100px
+        transition: all 0.2s
       &__value
-        font-size: 1.5rem
+        font-size: 3rem
       &__text
       &__icon
-        width: 40px
-        height: 30px
+        width: auto
+        height: 3.5rem
+        padding-top: 0.5rem
         margin-top: 0px
         margin-bottom: 10px 
+        display: inline
     & .scene-2
       margin-top: 30vh
 @media (max-width: 767px)
-  .mob-header
-    display: block
-    position: static
-    margin-bottom: 50px
-  .mob-mis-top
+  // .mob-header
+  //   display: block
+  //   position: static
+  //   margin-bottom: 50px
+  // .mob-mis-top
+  //   width: 90vw
+  //   margin: auto
+  //   margin-top: 100px
+  //   margin-bottom: 50px
+  //   display: flex
+  //   flex-direction: column
+  //   align-items: center
+  //   justify-content: space-between
+  //   & .title
+  //     font-size: 2.5rem
+  //     margin-bottom: 15px
+  //     text-align: center
+  //   & .text
+  //     width: 90vw
+  //     font-size: 1rem
+  //     line-height: 130%
+  //     font-weight: 400
+  //     margin-bottom: 20px
+  //     text-align: center
+  //   & .btn
+  //     width: 150px
+  // .qbody
+  //   // display: none
+  // .mob-statistics
+  //   background-image: url(../img/Covid_18.jpg)  
+  //   background-position: center
+  //   background-repeat: no-repeat
+  //   background-size: cover
+  //   display: flex
+  //   // background: yellow
+  //   justify-content: space-between
+  //   // width: 84vw
+  //   // top: 20vh
+  //   // margin: auto
+  //   // position: absolute
+  //   // left: 8vw
+  //   // display: flex
+  //   // flex-direction: column
+  //   // justify-content: space-between   
+  //   // z-index: 2
+  //   & .statistics-1
+  //     padding-right: 25px
+  //     padding-left: 25px
+  //     display: flex
+  //     flex-direction: column
+  //     gap: 20px
+  //   & .statistics-2  
+  //     padding-right: 25px
+  //     padding-left: 25px
+  //     display: flex
+  //     flex-direction: column
+  //     gap: 20px
+  //   &__item
+  //     width: 15vw
+  //     // width: min-content
+  //     // min-height: 131px
+  //     display: flex
+  //     flex-direction: column
+  //     align-items: center
+  //     justify-content: space-between
+  //   &__value
+  //     font-size: 1.5rem
+  //     display: block
+  //     line-height: 130%
+  //     font-weight: 700
+  //   &__text
+  //     display: block
+  //     font-size: 1rem
+  //     line-height: 150%
+  //     font-weight: 500
+  //     text-align: center
+  //   &__icon
+  //     width: 40px
+  //     height: 30px
+  //     margin-top: 0px
+  //     margin-bottom: 10px 
+  .qbody .staging .to-fix .stage .scene-1 .title 
+    font-size: 2.5rem
+    margin-bottom: 15px
+    text-align: center
+    
+
+  .qbody .staging .to-fix .stage .scene-1 .text 
     width: 90vw
-    margin: auto
-    margin-top: 100px
-    margin-bottom: 50px
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
-    & .title
-      font-size: 2.5rem
-      margin-bottom: 15px
-      text-align: center
-    & .text
-      width: 90vw
-      font-size: 1rem
-      line-height: 130%
-      font-weight: 400
-      margin-bottom: 20px
-      text-align: center
-    & .btn
-      width: 150px
-  .qbody
-    // display: none
-  .mob-statistics
-    background-image: url(../img/Covid_18.jpg)  
+    font-size: 1rem
+    line-height: 130%
+    font-weight: 400
+    margin-bottom: 20px
+    text-align: center
+  
+
+  .qbody .staging .to-fix .stage .statistics .statistics-1, .qbody .staging .to-fix .stage .statistics .statistics-2 
+    position: absolute
+    display: block
+    width: 100%
+    text-align: center
+    padding: 0
+  
+
+  .qbody .staging .to-fix .stage .statistics 
+    overflow: hidden
+    display: block
+    height: 20vh
+  
+
+  .qbody .staging .to-fix .stage .statistics__item 
+    position: absolute
+    width: 100%
+    display: block
+    top: 100px
+    -webkit-transition: all 0.2s 
+    transition: all 0.2s 
+  
+
+  .qbody .staging .to-fix .stage .statistics__value 
+    font-size: 3rem
+  
+
+  .qbody .staging .to-fix .stage .statistics__text 
+    font-size: 1rem
+  
+
+  .qbody .staging .to-fix .stage .statistics__icon 
+    padding-top: 0.5rem
+    width: auto
+    height: 3.5rem
+    margin-top: 0px
+    margin-bottom: 10px
+    display: inline
+  
+
+  .qbody .staging .to-fix .stage .scene-2 
+    margin-top: 0vh
+  
+
+
+
+  .mob-statistics 
+    background-image: url(../img/Covid_18.jpg)
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
-    // background: yellow
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
     justify-content: space-between
-    // width: 84vw
-    // top: 20vh
-    // margin: auto
-    // position: absolute
-    // left: 8vw
-    // display: flex
-    // flex-direction: column
-    // justify-content: space-between   
-    // z-index: 2
-    & .statistics-1
-      padding-right: 25px
-      padding-left: 25px
-      display: flex
-      flex-direction: column
-      gap: 20px
-    & .statistics-2  
-      padding-right: 25px
-      padding-left: 25px
-      display: flex
-      flex-direction: column
-      gap: 20px
-    &__item
-      width: 15vw
-      // width: min-content
-      // min-height: 131px
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: space-between
-    &__value
-      font-size: 1.5rem
-      display: block
-      line-height: 130%
-      font-weight: 700
-    &__text
-      display: block
-      font-size: 1rem
-      line-height: 150%
-      font-weight: 500
-      text-align: center
-    &__icon
-      width: 40px
-      height: 30px
-      margin-top: 0px
-      margin-bottom: 10px 
+  
+
+  .mob-statistics .statistics-1 
+    padding-right: 25px
+    padding-left: 25px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    gap: 20px
+  
+
+  .mob-statistics .statistics-2 
+    padding-right: 25px
+    padding-left: 25px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    gap: 20px
+  
+
+  .mob-statistics__item 
+    width: 15vw
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+  
+
+  .mob-statistics__value 
+    font-size: 1.5rem
+    display: block
+    line-height: 130%
+    font-weight: 700
+  
+
+  .mob-statistics__text 
+    display: block
+    font-size: 1rem
+    line-height: 150%
+    font-weight: 500
+    text-align: center
+
+  .mob-statistics__icon 
+    width: 40px
+    height: 30px
+    margin-top: 0px
+    margin-bottom: 10px
