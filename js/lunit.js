@@ -2,7 +2,7 @@ setTimeout(function () {
   window.scrollTo(0, 0);
 }, 400)
 $(function () {
-  var ht = 8000;
+  var ht = 7000;
   var vh = $(window).height();
   $('.qbody .staging ').height(ht);
   if ($(window).width() > 0) {
@@ -88,15 +88,15 @@ $(function () {
 
     // Картинки //
     var start = 500;
-    var stop = ht - start * 2;
+    var stop = Math.ceil(ht / 2 - start);
     var images = $(".staging-1 .scene-2 img").length + 1;
     var offset = [];
 
-    for (i = 0; i < images; i++) {
+    for (i = 0; i <= images; i++) {
       let os = Math.ceil((stop - start) / images);
       offset[i] = start + os * (i + 1);
       if (i !== 0) {
-        if (i + 1 < images) {
+        if (i + 1 <= images) {
           $(".staging-1 .scene-2 img:eq(" + (i - 1) + ")").scroolly([
             {
               from: "con-top + " + (offset[i - 1]) + " = top",
@@ -150,8 +150,8 @@ $(function () {
     // Плашки //
 
     var height = $(".staging-1 .statistics-1").height();
-    var off = 500;
-    var top = off;
+    var off = stop;
+    var top = ht / 2 - start;
     var stop1;
     var stop2;
     var plates;
@@ -159,8 +159,8 @@ $(function () {
       // первый блок плашек
       plates = $('.staging-1 .statistics-1 .statistics__item').length;
       for (i = 1; i <= plates; i++) {
-        let start = top + (i * ((ht * 0.2) / plates));
-        let stop = stop1 = start + height * 1.2;
+        let start = top + (i * ((ht / 2 - off) / plates));
+        let stop = stop1 = start + height;
         $(".staging-1 .statistics-1 .statistics__item:eq(" + (i - 1) + ")").scroolly(
           [
             {
@@ -182,9 +182,9 @@ $(function () {
       
       // второй блок плашек
       plates = $('.staging-1 .statistics-2 .statistics__item').length;
-      top = stop1 + off;
+      top = stop1 + vh ;
       for (i = 1; i <= plates; i++) {
-        let start = top + (i * ((ht * 0.2) / plates));
+        let start = top + (i * ((ht / 2 - off) / plates));
         let stop = stop2 = start + height * 1.2;
         $(".staging-1 .statistics-2 .statistics__item:eq(" + (i - 1) + ")").scroolly(
           [
@@ -205,10 +205,9 @@ $(function () {
         );
       }
     
-
     // весь блок плашек наверх
-    let start = stop1 + off;
-    let stop = start + off*5;
+    let start = Math.ceil(stop1 + vh/5);
+    let stop = start + vh;
     $(".staging-1 .statistics-1").scroolly(
       [
         {
@@ -227,8 +226,8 @@ $(function () {
       $(".staging-1")
     );
     
-    start = stop2 + off;
-    stop = start + off*5;
+    start = Math.ceil(stop2 + vh/5);
+    stop = start + vh;
     $(".staging-1 .statistics-2").scroolly(
       [
         {
@@ -299,38 +298,5 @@ $(function () {
     }
   }
 
-  /*
-      $(".staging-1 .scene-2").scroolly(
-        [
-          {
-            from: "con-top + 10000 = top",
-            to: "con-top + 11000 = top",
-            cssFrom: {
-              transform: "translateY(-35vh)",
-            },
-            cssTo: {
-              transform: "translateY(-100vh)",
-            },
-          },
-        ],
-        $(".staging-1")
-      );
-  */
-
-  $(".staging-1 .mis-header-top").scroolly(
-    [
-      {
-        from: "con-top + 10000 = top",
-        to: "con-top + 11000 = top",
-        cssFrom: {
-          transform: "translateY(-0.01vh)",
-        },
-        cssTo: {
-          transform: "translateY(-20vh)",
-        },
-      },
-    ],
-    $(".staging-1")
-  );
 }
 });
