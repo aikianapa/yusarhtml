@@ -159,7 +159,7 @@ $(function () {
       // первый блок плашек
       plates = $('.staging-1 .statistics-1 .statistics__item').length;
       for (i = 1; i <= plates; i++) {
-        let start = top + (i * ((ht / 2 - off) / plates));
+        let start = Math.ceil(top + (i * ((ht / 2 - off) / plates)));
         let stop = stop1 = start + height;
         $(".staging-1 .statistics-1 .statistics__item:eq(" + (i - 1) + ")").scroolly(
           [
@@ -184,8 +184,8 @@ $(function () {
       plates = $('.staging-1 .statistics-2 .statistics__item').length;
       top = stop1 + vh ;
       for (i = 1; i <= plates; i++) {
-        let start = top + (i * ((ht / 2 - off) / plates));
-        let stop = stop2 = start + height * 1.2;
+        let start = Math.ceil(top + (i * ((ht / 2 - off) / plates)));
+        let stop = stop2 = Math.ceil(start + height * 1.2);
         $(".staging-1 .statistics-2 .statistics__item:eq(" + (i - 1) + ")").scroolly(
           [
             {
