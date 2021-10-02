@@ -2,7 +2,7 @@ setTimeout(function () {
   window.scrollTo(0, 0);
 }, 400)
 $(function () {
-  var ht = 5000;
+  var ht = 8000;
   var vh = $(window).height();
   $('.qbody .staging ').height(ht);
   if ($(window).width() > 0) {
@@ -150,7 +150,7 @@ $(function () {
     // Плашки //
 
     var height = $(".staging-1 .statistics-1").height();
-    var off = 200;
+    var off = 500;
     var top = off;
     var stop1;
     var stop2;
