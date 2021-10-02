@@ -4348,7 +4348,7 @@ main .tsami .card-text {
 
 .qbody .staging .to-fix .stage .statistics {
     width: 84vw;
-    top: 20vh;
+    top: 37vh;
     margin: auto;
     position: absolute;
     left: 8vw;
@@ -4367,6 +4367,8 @@ main .tsami .card-text {
 }
 
 .qbody .staging .to-fix .stage .statistics .statistics-1 {
+    position: absolute;
+    top:0vh;
     height: 25vh;
     padding-right: 25px;
     padding-left: 25px;
@@ -4386,6 +4388,8 @@ main .tsami .card-text {
 }
 
 .qbody .staging .to-fix .stage .statistics .statistics-2 {
+    position: absolute;
+    top:0vh;
     height: 25vh;
     padding-right: 25px;
     padding-left: 25px;
@@ -4422,8 +4426,8 @@ main .tsami .card-text {
     justify-content: space-between;
     -webkit-transform: translateY(24vh);
     transform: translateY(24vh);
-    -webkit-transition: all 0.5s ease 0.5s;
-    transition: all 0.5s ease 0.5s
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .qbody .staging .to-fix .stage .statistics__value {
