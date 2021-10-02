@@ -247,13 +247,14 @@ $(function () {
     );
 
   } else {
+    let top = Math.ceil(ht / 2 + start);
     let offset = [];
     let plates = $('.statistics.mis-container').find('.statistics__item').length;
-    let os = Math.ceil((stop - top) / plates);
+    let os = Math.ceil((ht / 2 - start) / plates);
     offset[0] = top;
     for (i = 1; i <= plates; i++) {
-      offset[i] = start + (os * i);
-      offset[i + 1] = start + (os * (i + 1));
+      offset[i] = top + (os * i);
+      offset[i + 1] = top + (os * (i + 1));
       $('.statistics.mis-container').height(height);
       $('.statistics.mis-container > div').height(height);
       $('.statistics.mis-container .statistics__item').height(height);
