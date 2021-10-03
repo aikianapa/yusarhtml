@@ -216,17 +216,18 @@
     width: 100%
     text-align: center
     padding: 0
-  .qbody .staging .to-fix .stage .statistics 
-    overflow: hidden
+    overflow: visible
+  .qbody .staging .to-fix .stage .statistics
     display: block
     height: 20vh
   .qbody .staging .to-fix .stage .statistics__item 
     position: absolute
     width: 100%
     display: block
-    top: 100px
-    -webkit-transition: all 0.2s 
-    transition: all 0.2s 
+    top: "15.000vh"
+    transition: all 0.2s ease
+    transform: none
+    opacity: 0
   .qbody .staging .to-fix .stage .statistics__value 
     font-size: 5rem
   .qbody .staging .to-fix .stage .statistics__text 
@@ -239,54 +240,31 @@
     margin-bottom: 10px
     display: inline
   .qbody .staging .to-fix .stage .scene-2 
-    margin-top: 0vh
+    margin-top: 0vh    
   .mob-statistics 
     background-image: url(../img/Covid_18.jpg)
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
     justify-content: space-between
   .mob-statistics .statistics-1 
     padding-right: 25px
     padding-left: 25px
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-orient: vertical
-    -webkit-box-direction: normal
-    -ms-flex-direction: column
     flex-direction: column
     gap: 20px
   .mob-statistics .statistics-2 
     padding-right: 25px
     padding-left: 25px
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-orient: vertical
-    -webkit-box-direction: normal
-    -ms-flex-direction: column
     flex-direction: column
     gap: 20px
   .mob-statistics__item 
     width: 15vw
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-orient: vertical
-    -webkit-box-direction: normal
-    -ms-flex-direction: column
     flex-direction: column
-    -webkit-box-align: center
-    -ms-flex-align: center
     align-items: center
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
     justify-content: space-between
   .mob-statistics__value 
     font-size: 1.5rem
