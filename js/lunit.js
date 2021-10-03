@@ -1,3 +1,5 @@
+var width = $(window).width();
+
 var lunitInit = function () {
   window.scrollTo(0, 0);
   var ht = 8000;
@@ -261,7 +263,6 @@ var lunitInit = function () {
       for (i = 1; i <= plates; i++) {
         offset[i] = top + (os * i);
         offset[i + 1] = offset[i] + os;
-        console.log(offset);
         $('.statistics.mis-container').height(height);
         $('.statistics.mis-container > div').height(height);
         $('.statistics.mis-container .statistics__item').height(height);
@@ -301,7 +302,7 @@ var lunitInit = function () {
 }
 
 $(window).on('resize',function(){
-    lunitInit();
+    if (Math.abs(width - $(window).width()) > width / 10) lunitInit();
 }) 
 
 setTimeout(function () {
