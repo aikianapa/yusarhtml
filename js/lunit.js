@@ -1,8 +1,7 @@
 var lunitInit = function () {
   window.scrollTo(0, 0);
-  var ht;
+  var ht = 20000;
   var vh = $(window).height();
-  $(window).width() > 767 ? ht = 7000 : ht = 7000;
 
   $('.qbody .staging ').height(ht);
   if ($(window).width() > 0) {
