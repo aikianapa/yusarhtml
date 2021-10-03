@@ -712,11 +712,21 @@
       display: flex
       justify-content: space-between
       align-items: center
+    &-wrapper
+      display: flex
+      align-items: center
   // .mobile-menu-list
   //   display: block    
   .drop-down-list
     cursor: pointer
     font-size: 1.15rem
+    &-arrow
+      padding-top: 19px
+      padding-right: 0
+      padding-bottom: 19px
+      padding-left: 15px
+      cursor: pointer
+
   .mobile-menu-list
     &-active
       display: block
@@ -756,7 +766,7 @@
   .btn-video
     display: inline
   .purpose, .description, .benefits, .special, .reviews
-    padding-top: 100px
+    padding-top: 260px
   .reviews, .products
     &__button
       &-prev, &-next

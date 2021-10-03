@@ -1,7 +1,12 @@
 $(document).ready(function () {
   const dropDownList = document.querySelector(".drop-down-list");
+  const dropDownListArrow = document.querySelector(".drop-down-list-arrow");
   const mobileMenuListLinks = document.querySelectorAll(
     ".mobile-menu-list__link"
+  );
+
+  dropDownListArrow.addEventListener("click", () =>
+    $(".mobile-menu-list").toggleClass("mobile-menu-list-active")
   );
 
   dropDownList.addEventListener("click", () =>
@@ -23,53 +28,15 @@ $(document).ready(function () {
     const item5 = $("#reviews").offset().top - 120;
 
     if (top > item5) {
-      $(".drop-down-list").text(
-        "Отзывы " +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          "V"
-      );
+      $(".drop-down-list").text("Отзывы ");
     } else if (top > item4) {
-      $(".drop-down-list").text(
-        "Новости " +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          "V"
-      );
+      $(".drop-down-list").text("Новости ");
     } else if (top > item3) {
-      $(".drop-down-list").text(
-        "Преимущества " +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          "V"
-      );
+      $(".drop-down-list").text("Преимущества ");
     } else if (top > item2) {
-      $(".drop-down-list").text(
-        "Описание " +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          "V"
-      );
+      $(".drop-down-list").text("Описание ");
     } else if (top > item1) {
-      $(".drop-down-list").text(
-        "Цель " +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          String.fromCharCode(160) +
-          "V"
-      );
+      $(".drop-down-list").text("Цель ");
     }
   });
 });
