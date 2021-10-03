@@ -1,9 +1,9 @@
-setTimeout(function () {
+var lunitInit = function () {
   window.scrollTo(0, 0);
-}, 400)
-$(function () {
-  var ht = 7000;
+  var ht;
   var vh = $(window).height();
+  $(window).width() > 767 ? ht = 7000 : ht = 7000;
+
   $('.qbody .staging ').height(ht);
   if ($(window).width() > 0) {
     $(".to-fix").scroolly(
@@ -86,11 +86,18 @@ $(function () {
       $(".staging-1")
     );
 
+
     // Картинки //
-    var start = 500;
-    var stop = Math.ceil(ht / 2 - start);
+    if ($(window).width() > 767) {
+      var start = 500;
+      var stop = Math.ceil(ht / 2 - start);
+    } else {
+      var start = 0;
+      var stop = Math.ceil(ht);
+    }
     var images = $(".staging-1 .scene-2 img").length + 1;
     var offset = [];
+
 
     for (i = 0; i <= images; i++) {
       let os = Math.ceil((stop - start) / images);
@@ -147,8 +154,7 @@ $(function () {
     // ========= //
 
 
-    // Плашки //
-
+    // Плашки //  
     var height = $(".staging-1 .statistics-1").height();
     var off = stop;
     var top = ht / 2 - start;
@@ -179,10 +185,10 @@ $(function () {
           $(".staging-1")
         );
       }
-      
+
       // второй блок плашек
       plates = $('.staging-1 .statistics-2 .statistics__item').length;
-      top = stop1 + vh ;
+      top = stop1 + vh;
       for (i = 1; i <= plates; i++) {
         let start = Math.ceil(top + (i * ((ht / 2 - off) / plates)));
         let stop = stop2 = Math.ceil(start + height * 1.2);
@@ -204,100 +210,101 @@ $(function () {
           $(".staging-1")
         );
       }
-    
-    // весь блок плашек наверх
-    let start = Math.ceil(stop1 + vh/5);
-    let stop = start + vh;
-    $(".staging-1 .statistics-1").scroolly(
-      [
-        {
-          from: "con-top + " + start + " = top",
-          to: "con-top + " + stop + " = top",
-          cssFrom: {
-            top: "-0.000vh",
-            opacity: "0.999"
-          },
-          cssTo: {
-            top: "-100vh",
-            opacity: "0"
-          },
-        }
-      ],
-      $(".staging-1")
-    );
-    
-    start = Math.ceil(stop2 + vh/5);
-    stop = start + vh;
-    $(".staging-1 .statistics-2").scroolly(
-      [
-        {
-          from: "con-top + " + start + " = top",
-          to: "con-top + " + stop + " = top",
-          cssFrom: {
-            top: "-0.000vh",
-            opacity: "0.999"
-          },
-          cssTo: {
-            top: "-100vh",
-            opacity: "0"
-          },
-        }
-      ],
-      $(".staging-1")
-    );
 
-  } else {
-    let top = Math.ceil(ht / 2 + start);
-    let offset = [];
-    let plates = $('.statistics.mis-container').find('.statistics__item').length;
-    let os = Math.ceil((ht / 2 - start) / plates);
-    offset[0] = top;
-    for (i = 1; i <= plates; i++) {
-      offset[i] = top + (os * i);
-      offset[i + 1] = top + (os * (i + 1));
-      $('.statistics.mis-container').height(height);
-      $('.statistics.mis-container > div').height(height);
-      $('.statistics.mis-container .statistics__item').height(height);
-      $(".staging-1 .statistics__item:eq(" + (i - 1) + ")").scroolly(
+      // весь блок плашек наверх
+      let start = Math.ceil(stop1 + vh / 5);
+      let stop = start + vh;
+      $(".staging-1 .statistics-1").scroolly(
         [
           {
-            from: "con-top + " + (offset[i - 1]) + " = top",
-            to: "con-top + " + (offset[i] - 1) + " = top",
+            from: "con-top + " + start + " = top",
+            to: "con-top + " + stop + " = top",
             cssFrom: {
-              top: height + "px",
-              opacity: "0.001"
-            },
-            cssTo: {
-              top: (-height) + "px",
-              opacity: "0.999"
-            },
-          },
-          {
-            from: "con-top + " + (offset[i]) + " = top",
-            to: "con-top + " + (offset[i + 1] - 1) + " = top",
-            cssFrom: {
+              top: "-0.000vh",
               opacity: "0.999"
             },
             cssTo: {
-              opacity: "0.001"
-            },
-          }
-          ,
-          {
-            from: "con-top + " + (offset[i + 1]) + " = top",
-            to: "con-top + " + (offset[i + 1] + 1) + " = top",
-            cssFrom: {
-              top: (-height * 2) + "px",
-            },
-            cssTo: {
-              top: (-height * 2) + "px",
+              top: "-100vh",
+              opacity: "0"
             },
           }
         ],
         $(".staging-1")
       );
-    }
-  }
 
+      start = Math.ceil(stop2 + vh / 5);
+      stop = start + vh;
+      $(".staging-1 .statistics-2").scroolly(
+        [
+          {
+            from: "con-top + " + start + " = top",
+            to: "con-top + " + stop + " = top",
+            cssFrom: {
+              top: "-0.000vh",
+              opacity: "0.999"
+            },
+            cssTo: {
+              top: "-100vh",
+              opacity: "0"
+            },
+          }
+        ],
+        $(".staging-1")
+      );
+
+    } else {
+      var top = Math.ceil(ht - vh);
+      top = vh;
+      let offset = [];
+      let plates = $('.statistics.mis-container').find('.statistics__item').length;
+      let os = Math.ceil((ht - top - vh) / plates);
+      offset[0] = top;
+      for (i = 1; i <= plates; i++) {
+        offset[i] = top + (os * i);
+        offset[i + 1] = offset[i] + os;
+        console.log(offset);
+        $('.statistics.mis-container').height(height);
+        $('.statistics.mis-container > div').height(height);
+        $('.statistics.mis-container .statistics__item').height(height);
+        $(".staging-1 .statistics__item:eq(" + (i - 1) + ")").scroolly(
+          [
+            {
+              from: "con-top + " + (offset[i - 1]) + " = top",
+              to: "con-top + " + (offset[i]) + " = top",
+              cssFrom: {
+                "top": "25.000vh",
+                "opacity": "0.001"
+              },
+              cssTo: {
+                "top": "-0.001vh",
+                opacity: "0.999"
+              },
+            },
+            {
+              from: "con-top + " + (offset[i]) + " = top",
+              to: "con-top + " + (offset[i + 1]) + " = top",
+              cssFrom: {
+                "top": "-0.001vh",
+                "opacity": "0.999"
+              },
+              cssTo: {
+                "top": "-20.001vh",
+                "opacity": "0.001"
+              },
+            }
+          ],
+          $(".staging-1")
+        );
+      }
+    }
+
+  }
 }
-});
+
+$(window).on('resize',function(){
+    lunitInit();
+}) 
+
+setTimeout(function () {
+  lunitInit();
+}, 400)
