@@ -62,7 +62,7 @@ var lunitInit = function () {
           },
           cssTo: {
             top: "216px",
-            transform: "translateY(-1500px)",
+            transform: "translateY("+vh+"px)",
           },
         },
       ],
@@ -90,7 +90,7 @@ var lunitInit = function () {
 
     // Картинки //
     if ($(window).width() > 767) {
-      var start = 500;
+      var start = 0;
       var stop = Math.ceil(ht / 2 - start);
     } else {
       var start = 0;
