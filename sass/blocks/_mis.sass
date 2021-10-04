@@ -10,19 +10,6 @@
   position: relative
   margin-bottom: 30px
   z-index: 2
-  // background-image: url(../img/mis.png)  
-  // background-repeat: no-repeat
-  // background-size: cover
-  // background-position: -450px 0px
-  // background-position: left top
-  // background-size: cover
-  // object-fit: cover
-  // &-swiper
-  //   &._active
-  //     transition: 1.5s
-  //     delay: 0.3s
-  //     // opacity: 0
-  //     transform: translateY(-300px)
   & .scroll-covid
     width: 30vw
     height: 30vw
@@ -49,7 +36,6 @@
     z-index: -1
   &-top
     width: 500px
-    // margin-bottom: 238px
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -57,11 +43,9 @@
       transition: 1.5s
       delay: 0.3s
       opacity: 0
-      // transform: translateX(-700px)
   & .title
     margin-bottom: 40px
     font-size: 4.5rem
-    // line-height: 83%
     font-weight: 700    
   & .text
     width: 628px
@@ -85,21 +69,16 @@
     &-wrapper
       width: 100%
       max-height: min-content
-      // border: 20px solid blue
     &-slide
       width: 100%
-      // border: 20px solid yellow
     &-container
-      // margin: auto
       width: 100%
       height: auto
-      // border: 20px solid tomato
       & img
         width: 100%
         height: auto
         object-fit: cover
   &-nav    
-    // margin-bottom: 16px
     display: flex    
     align-items: center
     justify-content: space-between
@@ -129,10 +108,7 @@
       font-weight: 500
       border-radius: 33px
       color: #444
-      background: none
-      // &-active
-      //   background: #7A7F83
-      //   color: #fff      
+      background: none 
   &-hr
     height: 1px
     margin-bottom: 96px
@@ -615,10 +591,24 @@
       transform: rotate(180deg)
       cursor: pointer
       z-index: 1
+// .yusar-menu
+//   display: none
+//   &-active
+//     display: block
+//   &-list
+//     display: flex
+//     &__item
+//       margin-right: 50px
+.mob-nav
+  display: none
+.mobile-menu-list
+  display: none
+
 @media (max-width: 1199px)
   .mis-menu__item
     padding-right: 15px
     padding-left: 15px
+    cursor: pointer
   .description
     & .double-card
       flex-direction: column
@@ -679,18 +669,108 @@
     & .card-text
       margin-bottom: 1rem
 @media (max-width: 767px)
-  .mis
-    &-nav
+  .mob-header 
+    display: block
+    position: static
+    margin-bottom: 50px
+  .mob-mis-top 
+    width: 90vw
+    margin: auto
+    margin-top: 100px
+    margin-bottom: 50px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+  .mob-mis-top .title 
+    font-size: 2.5rem
+    margin-bottom: 15px
+    text-align: center
+  .mob-mis-top .text 
+    width: 90vw
+    font-size: 1rem
+    line-height: 130%
+    font-weight: 400
+    margin-bottom: 20px
+    text-align: center
+  .mob-mis-top .btn
+    width: 150px
+  
+  
+
+  .mob-nav
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+    position: sticky
+    top: 0
+    z-index: 10
+    background: #000
+    border-radius: 0
+    border: none
+    &-flex
+      display: flex
+      justify-content: space-between
       align-items: center
-      flex-direction: column
-    &-menu
-      flex-direction: column
+    &-wrapper
+      display: flex
+      align-items: center
+  // .mobile-menu-list
+  //   display: block    
+  .drop-down-list
+    cursor: pointer
+    font-size: 1.15rem
+    &-arrow
+      padding-top: 19px
+      padding-right: 0
+      padding-bottom: 19px
+      padding-left: 15px
+      cursor: pointer
+
+  .mobile-menu-list
+    &-active
+      display: block
+    &__item
+      margin-bottom: 20px
+
+  // .drop-down-list:focus
+  //   & .mobile-menu-list
+  //     display: block
+  // .drop-down-list:active
+  //   & .mobile-menu-list
+  //     display: block
+  // .mobile-menu-list:hover
+  //   display: block
+  // .humburger
+  //   &-wrapper
+  //     display: block
+  //     padding-top: 10px
+  //     padding-bottom: 10px
+  //     border-radius: 0
+  //     border: none
+  //     position: sticky
+  //     top: 0
+  //     z-index: 10
+  //     background: #000
+  //   &-flex
+  //     display: flex
+  //     align-items: center
+  //     justify-content: space-between
+  //   // &-menu
+  //   //   display: block
+  
+  .mis   
+    &-menu      
+      &-wrapper
+        display: none        
+  .btn-video
+    display: inline
   .purpose, .description, .benefits, .special, .reviews
-    padding-top: 20px
+    padding-top: 260px
   .reviews, .products
     &__button
       &-prev, &-next
-        display: none
+        display: none  
 @media (max-width: 599px)
   .statistics-1, .statistics-2
     flex-direction: column
@@ -708,5 +788,3 @@
 @media (max-width: 374px)
   .components__item
     flex-wrap: wrap
-
-

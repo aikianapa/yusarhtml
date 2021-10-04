@@ -144,12 +144,12 @@ $(document).ready(function () {
     },
   });
 
-  
   //растущие числа
-  if (document.querySelector(".number-1")) var number1 = document.querySelector(".number-1"),
-    number1Top = number1.getBoundingClientRect().top,
-    start1 = +number1.innerHTML,
-    end1 = +number1.dataset.max;
+  if (document.querySelector(".number-1"))
+    var number1 = document.querySelector(".number-1"),
+      number1Top = number1.getBoundingClientRect().top,
+      start1 = +number1.innerHTML,
+      end1 = +number1.dataset.max;
 
   if (window.innerHeight >= number1Top) {
     var interval1 = setInterval(function () {
@@ -171,10 +171,11 @@ $(document).ready(function () {
       }
     });
   }
-  if (document.querySelector(".number-2")) var number2 = document.querySelector(".number-2"),
-    number2Top = number2.getBoundingClientRect().top,
-    start2 = +number2.innerHTML,
-    end2 = +number2.dataset.max;
+  if (document.querySelector(".number-2"))
+    var number2 = document.querySelector(".number-2"),
+      number2Top = number2.getBoundingClientRect().top,
+      start2 = +number2.innerHTML,
+      end2 = +number2.dataset.max;
 
   if (window.innerHeight >= number2Top) {
     var interval2 = setInterval(function () {
@@ -264,7 +265,6 @@ $(document).ready(function () {
       }, 120);
     }
   });
-
 
   $(document).scroll(function () {
     const top = window.pageYOffset;
