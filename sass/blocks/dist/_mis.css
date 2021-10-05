@@ -959,6 +959,12 @@
     width: 100%;
     font-size: 1.75rem;
   }
+  .reviews .swiper-slide, .products .swiper-slide {
+    border: 10px solid #000;
+  }
+  .reviews__button-prev, .reviews__button-next, .products__button-prev, .products__button-next {
+    display: none;
+  }
   .description .columns span {
     font-size: 1.75rem;
   }

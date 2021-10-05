@@ -2599,14 +2599,22 @@ main .tsami .card-text {
     width: 100%;
     font-size: 1.75rem;
   }
-  /* line 788, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 786, ../www/yusarhtml/sass/blocks/_mis.sass */
+  .reviews .swiper-slide, .products .swiper-slide {
+    border: 10px solid #000;
+  }
+  /* line 789, ../www/yusarhtml/sass/blocks/_mis.sass */
+  .reviews__button-prev, .reviews__button-next, .products__button-prev, .products__button-next {
+    display: none;
+  }
+  /* line 793, ../www/yusarhtml/sass/blocks/_mis.sass */
   .description .columns span {
     font-size: 1.75rem;
   }
 }
 
 @media (max-width: 374px) {
-  /* line 791, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 796, ../www/yusarhtml/sass/blocks/_mis.sass */
   .components__item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
