@@ -2519,13 +2519,13 @@ main .tsami .card-text {
     padding-top: 10px;
     padding-bottom: 10px;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 10;
     background: #000;
     border-radius: 0;
     border: none;
   }
-  /* line 711, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 712, ../www/yusarhtml/sass/blocks/_mis.sass */
   .mob-nav-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2537,7 +2537,7 @@ main .tsami .card-text {
         -ms-flex-align: center;
             align-items: center;
   }
-  /* line 715, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 716, ../www/yusarhtml/sass/blocks/_mis.sass */
   .mob-nav-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2546,12 +2546,12 @@ main .tsami .card-text {
         -ms-flex-align: center;
             align-items: center;
   }
-  /* line 720, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 721, ../www/yusarhtml/sass/blocks/_mis.sass */
   .drop-down-list {
     cursor: pointer;
     font-size: 1.15rem;
   }
-  /* line 723, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 724, ../www/yusarhtml/sass/blocks/_mis.sass */
   .drop-down-list-arrow {
     padding-top: 19px;
     padding-right: 0;
@@ -2559,53 +2559,54 @@ main .tsami .card-text {
     padding-left: 15px;
     cursor: pointer;
   }
-  /* line 731, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 732, ../www/yusarhtml/sass/blocks/_mis.sass */
   .mobile-menu-list-active {
     display: block;
   }
-  /* line 733, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 734, ../www/yusarhtml/sass/blocks/_mis.sass */
   .mobile-menu-list__item {
     margin-bottom: 20px;
   }
-  /* line 764, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 765, ../www/yusarhtml/sass/blocks/_mis.sass */
   .mis-menu-wrapper {
     display: none;
   }
-  /* line 766, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 767, ../www/yusarhtml/sass/blocks/_mis.sass */
   .btn-video {
     display: inline;
   }
-  /* line 768, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 769, ../www/yusarhtml/sass/blocks/_mis.sass */
   .purpose, .description, .benefits, .special, .reviews {
     padding-top: 260px;
+    margin-top: -260px;
   }
-  /* line 772, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 774, ../www/yusarhtml/sass/blocks/_mis.sass */
   .reviews__button-prev, .reviews__button-next, .products__button-prev, .products__button-next {
     display: none;
   }
 }
 
 @media (max-width: 599px) {
-  /* line 775, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 777, ../www/yusarhtml/sass/blocks/_mis.sass */
   .statistics-1, .statistics-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  /* line 780, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 782, ../www/yusarhtml/sass/blocks/_mis.sass */
   .technical .card-2 .card-title_big {
     width: 100%;
     font-size: 1.75rem;
   }
-  /* line 786, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 788, ../www/yusarhtml/sass/blocks/_mis.sass */
   .description .columns span {
     font-size: 1.75rem;
   }
 }
 
 @media (max-width: 374px) {
-  /* line 789, ../www/yusarhtml/sass/blocks/_mis.sass */
+  /* line 791, ../www/yusarhtml/sass/blocks/_mis.sass */
   .components__item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

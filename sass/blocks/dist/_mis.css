@@ -904,7 +904,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     position: sticky;
-    top: 0;
+    top: 0px;
     z-index: 10;
     background: #000;
     border-radius: 0;
@@ -944,6 +944,7 @@
   }
   .purpose, .description, .benefits, .special, .reviews {
     padding-top: 260px;
+    margin-top: -260px;
   }
   .reviews__button-prev, .reviews__button-next, .products__button-prev, .products__button-next {
     display: none;

@@ -77,6 +77,26 @@ var lunitInit = function () {
     offset = 55;
     $(window).width() > 767 ? offset = 37 : null;
     $(window).width() > 1425 ? offset = 50 : null;
+    $(window).height() > 800 ? offset = 25 : null;
+    $(window).height() > 1000 ? offset = 0 : null;
+    if ($(window).width() < 768) {
+      vh >= 499 ? offset = 70 : null;
+      vh >= 560 ? offset = 55 : null;
+      vh >= 660 ? offset = 40 : null;
+      vh >= 730 ? offset = 30 : null;
+      vh >= 810 ? offset = 26 : null;
+      vh >= 1000 ? offset = 5 : null;
+      vh >= 1300 ? offset = 0 : null;
+    }
+
+
+    /*
+    1000 = -18
+    736 = -30 2.18
+    667 = -40 2.11
+    568 = - 55 2.18
+    500 = -70
+    */
     $(".staging-1 .scene-2").scroolly(
       [
         {
@@ -166,7 +186,7 @@ var lunitInit = function () {
     // Плашки //  
     var height = $(".staging-1 .statistics-1").height();
     var off = stop;
-    var top = ht / 2 - start;
+    var top = ht / 2;
     var stop1;
     var stop2;
     var plates;
