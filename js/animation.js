@@ -94,8 +94,6 @@ var lunitInit = function () {
       vh >= 1200 ? offset = 2 : null;
       vh >= 1300 ? offset = 0 : null;
     }
-
-
     /*
     1000 = -18
     736 = -30 2.18
@@ -247,7 +245,7 @@ var lunitInit = function () {
       }
 
       // весь блок плашек наверх
-      let start = Math.ceil(stop1 + vh / 5);
+      let start = Math.ceil(stop1 + vh / 5) + vh;
       let stop = start + vh;
       $(".staging-1 .statistics-1").scroolly(
         [
@@ -267,7 +265,7 @@ var lunitInit = function () {
         $(".staging-1")
       );
 
-      start = Math.ceil(stop2 + vh / 5);
+      start = Math.ceil(stop2 + vh / 5) + vh;
       stop = start + vh;
       $(".staging-1 .statistics-2").scroolly(
         [
