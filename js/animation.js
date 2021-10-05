@@ -2,7 +2,7 @@ var width = $(window).width();
 
 var lunitInit = function () {
   window.scrollTo(0, 0);
-  var ht = 8000;
+  var ht = 10000;
   var vh = $(window).height();
   var vw = $(window).width();
   var ih // image height
@@ -245,7 +245,7 @@ var lunitInit = function () {
       }
 
       // весь блок плашек наверх
-      let start = Math.ceil(stop1 + vh / 5) + vh;
+      let start = Math.ceil(stop1 ) + vh;
       let stop = start + vh;
       $(".staging-1 .statistics-1").scroolly(
         [
@@ -265,7 +265,7 @@ var lunitInit = function () {
         $(".staging-1")
       );
 
-      start = Math.ceil(stop2 + vh / 5) + vh;
+      start = Math.ceil(stop2 ) + vh;
       stop = start + vh;
       $(".staging-1 .statistics-2").scroolly(
         [
